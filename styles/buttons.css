@@ -1,3 +1,10 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-white-muted: #c9c3f3;
+	--color-yellow: #ffde00;
+	--color-orange: #FF885E;
+}
 
 .btn {
 	color: var(--color-black);
