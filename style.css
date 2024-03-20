@@ -203,7 +203,7 @@ body {
 
 @media (max-width: 680px) {
 	.main {
-		padding-bottom: 0;
+		padding-bottom: 100px;
 	}
 	.wrapper {
 		padding: 0 8px;
