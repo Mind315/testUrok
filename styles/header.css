@@ -1,0 +1,36 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100px;
+}
+
+.nav__list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	justify-content: space-between;
+	gap: 65px;
+}
+
+.item {
+	text-align: center;
+}
+
+.item__title {
+	font-weight: 700;
+	margin: 0;
+}
+
+.item__text {
+	color: var(--color-white-muted);
+	margin: 0;
+}
+
+.item__text-value {
+	color: var(--color-yellow);
+	font-size: 16px;
+	font-weight: 700;
+}

@@ -1,0 +1,284 @@
+@import url("/styles/logo.css");
+@import url("/styles/buttons.css");
+@import url("/styles/header.css");
+@import url("/styles/components.css");
+
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-white-muted: #c9c3f3;
+	--color-yellow: #ffde00;
+	--color-orange: #FF885E;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	color: var(--color-white);
+	background: linear-gradient(90deg, #8159C6 0%, #6C7CFF 100%);
+}
+
+.main {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 130px;
+}
+
+.main::before {
+	content: "";
+	position: fixed;
+	bottom: -75px;
+	left: -12vw;
+	width: 120vw;
+	height: 150px;
+	transform: rotate(-5deg);
+	background: linear-gradient(90deg, #FF9D66 0%, #FF7256 100%);
+	z-index: 1;
+}
+
+.wrapper {
+	max-width: 1225px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.promo {
+	position: relative;
+}
+
+.promo__title {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 58px;
+	max-width: 550px;
+	margin-top: 90px;
+	position: relative;
+}
+
+.promo__title::before {
+	position: absolute;
+	content: "";
+	width: 113px;
+	height: 90px;
+	top: -65px;
+	left: 0;
+	background-image: url('/assets/img/title-icon.svg');
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.promo__title::after {
+	position: absolute;
+	content: "";
+	width: 21px;
+	height: 21px;
+	top: -65px;
+	left: -130px;
+	transform: rotate(45deg);
+	border: 5px solid var(--color-yellow);
+	opacity: .4;
+}
+
+.promo__title-span {
+	color: var(--color-yellow);
+}
+
+.promo__content-wrap {
+	display: flex;
+	gap: 60px;
+}
+
+.promo__block {
+	margin-bottom: 70px;
+}
+
+.promo__block-text {
+	font-size: 24px;
+	font-weight: 700;
+	margin: 0;
+	margin-bottom: 30px;
+}
+.promo__anim {
+	left: 10px;
+}
+
+.promo__button {
+	font-size: 16px;
+	line-height: 60px;
+	border: none;
+	box-shadow: 0px -2px 2px 0px #00000040 inset;
+  box-shadow: 0px 0px 30px 0px #FFDE0059;
+	background-color: var(--color-yellow);
+	transition: .3s;
+}
+
+.promo__button:hover {
+	box-shadow: 0px -2px 2px 0px #00000040 inset;
+}
+
+.promo__img-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.promo__img-wrap::before,
+.promo__img-wrap::after {
+	position: absolute;
+	content: "";
+	width: 47px;
+	height: 60px;
+	top: 0;
+	left: 0;
+	background-image: url('/assets/img/bg-img-icon.svg');
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+
+.promo__img-wrap::before {
+	top: 500px;
+	left: -100px;
+}
+.promo__img-wrap::after {
+	transform: rotate(180deg);
+	top: 0;
+	left: 500px;
+}
+
+
+@media (max-width: 1280px) {
+	
+	.nav__list {
+		gap: 3vw;
+	}
+	.promo__img-wrap {
+		width: 225px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.header {
+		flex-wrap: wrap;
+		height: auto;
+	}
+	.nav {
+		order: 1;
+		flex-basis: 100%;
+	}
+	.nav__list {
+		gap: 3vw;
+	}
+	.promo__img-wrap {
+		width: 225px;
+	}
+}
+
+@media (max-width: 800px) {
+	.promo__title {
+		font-size: 34px;
+		line-height: 34px;
+		max-width: 390px;
+		margin-top: 40px;
+	}
+
+	.promo__title:before, 
+	.promo__title:after {
+		display: none;
+	}
+	.promo__content-wrap {
+		gap: 20px;
+	}
+	.promo__img-wrap {
+		width: 160px;
+		position: fixed;
+		top: auto;
+		bottom: 100px;
+	}
+	.promo__img-wrap:before {
+		display: none;
+	}
+	.promo__img {
+		max-height: 400px;
+	}
+}
+
+@media (max-width: 680px) {
+	.main {
+		padding-bottom: 0;
+	}
+	.wrapper {
+		padding: 0 8px;
+	}
+
+	.logo__img {
+		width: 44px;
+		height: 44px;
+	}
+
+	.logo__title {
+		font-size: 20px;
+	}
+
+	.header__logo-btn  {
+		line-height: 38px;
+	}
+
+	.nav__list {
+		flex-wrap: wrap;
+		row-gap: 10px;
+	}
+
+	.nav__item {
+		flex-basis: 45%;
+	}
+
+	.promo__title {
+		font-size: 24px;
+		line-height: 28px;
+		max-width: 260px;
+		text-align: center;
+		margin: 40px auto 40px auto;
+	}
+
+	.promo__block {
+		margin-bottom: 20px;
+		margin-left: 10px;
+	}
+
+	.promo__content-wrap {
+		flex-direction: column;
+	}
+
+	.promo__block {
+		display: flex;
+		align-items: center;
+	}
+
+	.promo__block-text {
+		margin: 0;
+	}
+
+	.promo__anim  {
+		left: 25px;
+	}
+
+	.promo__button {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.promo__img-wrap {
+		width: 100px;
+		bottom: 80px;
+	}
+	
+	.promo__img-wrap:before {
+		display: none;
+	}
+	.promo__img {
+		max-height: 230px;
+	}
+}
